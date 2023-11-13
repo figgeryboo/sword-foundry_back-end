@@ -1,0 +1,58 @@
+const express = require("express");
+const swords = express.Router();
+const { getAllSwords, getSword, createSword, deleteSword, updateSword} = require('../queries/swords')
+const { checkName, checkMaker, checkPrice, checkUpgrade, checkCurses} = require('../validations/checkSwords')
+
+swords.get("/", async (req, res) => {
+  const allSwords = await getAllSwords()
+  if (allSwords[0]){
+    res.status(200).json(allSwords)
+  } else{
+  res.status(500).json({ error: "Foundry Error" })}
+});
+
+swords.get('/:id', async (req, res) => {
+  const { id } = req.params
+  const oneSword = await getSword(id)
+  if (oneSword){
+    res.status(200).json(oneSword)
+  } else {
+   res.status(404).json({error: 'Sword not Found'}) 
+  }
+})
+
+swords.post('/', checkName, checkMaker, checkPrice, checkUpgrade, checkCurses, async (req, res) =>{
+  const body = req.body
+  const createdSword = await createSword(body)
+    res.status(200).json(createdSword)
+})
+
+swords.delete('/:id', async (req, res) => {
+  const { id } = req.params
+  const deletedSword = await deleteSword(id)
+  if (deletedSword){
+    res.status(200).json(deletedSword)
+  } else{
+   res.status(404).json({error: 'Sword not Found'}) 
+  }
+})
+
+
+swords.put('/', checkName, checkMaker, checkPrice, checkUpgrade, checkCurses, async (req, res) =>{
+  const { id } = req.params
+  const body = req.body
+  const updatedSword = await updateSword(id, body)
+  if(updatedSword.id){
+    res.status(200).json(updatedSword)
+  } else {
+    res.status(404).json({error: 'Sword not Found'})
+  }
+})
+
+
+
+
+
+
+
+module.exports = swords;
