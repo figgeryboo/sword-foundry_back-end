@@ -20,8 +20,14 @@ To test the functionality of the backend of this project:
 4. Run `npm run db:init db:seed` to start the SQL database and seed the data provided into the table.
 5. Start server with `npm run start`. 
 
+#### Additional:
+
+[FRONT-END for this project can be found linked here.]()
+
+
+
 ***
 <br/>
 
-README.md last updated Nov 13
+README.md last updated Nov 15
 
