@@ -58,6 +58,7 @@ const updateSword = async (id, sword) => {
 				sword.is_upgraded,
 				sword.is_cursed,
 				sword.rarity,
+				id
 			]
 		);
 		return updatedSword;
