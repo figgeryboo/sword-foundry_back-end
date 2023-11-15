@@ -24,7 +24,7 @@ To test the functionality of the backend of this project:
 
 [FRONT-END for this project can be found linked here.](https://github.com/figgeryboo/sword-foundry_front-end)
 
-
+[LIVE DEPLOY for this project can be found linked here.](https://sword-foundry.netlify.app/)
 
 ***
 <br/>
