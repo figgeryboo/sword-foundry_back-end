@@ -5,6 +5,7 @@ const { checkName, checkMaker, checkPrice, checkUpgrade, checkCurses} = require(
 
 swords.get("/", async (req, res) => {
   const allSwords = await getAllSwords()
+  console.log(allSwords)
   if (allSwords[0]){
     res.status(200).json(allSwords)
   } else{
