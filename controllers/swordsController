@@ -39,7 +39,7 @@ swords.delete('/:id', async (req, res) => {
 })
 
 
-swords.put('/', checkName, checkMaker, checkPrice, checkUpgrade, checkCurses, async (req, res) =>{
+swords.put('/:id', checkName, checkMaker, checkPrice, checkUpgrade, checkCurses, async (req, res) =>{
   const { id } = req.params
   const body = req.body
   const updatedSword = await updateSword(id, body)
