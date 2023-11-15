@@ -6,8 +6,7 @@ INSERT INTO swords (name, maker, price, is_upgraded, is_cursed, rarity) VALUES
   ('Shadowstrike', 'Silent Forger', 800, true, false, 3),
   ('Frostbite', 'Ice Queen Crafts', 1200, true, false, 1),
   ('Serpent''s Bite', 'Venom Smithy', 700, false, true, 2),
-  ('Thunderstrike', 'Stormforge Artisans', 900, false, false, 2),
   ('Blazeblade', 'Inferno Smiths', 110, true, false, 1),
   ('Abyssal Edge', 'Dark Artistry', 2300, true, true, 5),
   ('Solar Flare', 'Sunfire Forgers', 1600, true, false, 5),
-  ('Moonlight''s Grace', 'Celestial Smiths', 1200, true, false, 4);
+  ('Moonlight''s Grace', 'Stormforge Artisans', 1200, true, false, 4);
