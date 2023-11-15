@@ -22,7 +22,7 @@ To test the functionality of the backend of this project:
 
 #### Additional:
 
-[FRONT-END for this project can be found linked here.]()
+[FRONT-END for this project can be found linked here.](https://github.com/figgeryboo/sword-foundry_front-end)
 
 
 
